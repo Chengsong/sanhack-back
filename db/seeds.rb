@@ -24,8 +24,19 @@ if Feel.count == 0
 end
 
 User.create([
-    {name: 'aa', mail: 'aaa', password: 'aaa'},
-    {name: 'bb', mail: 'aaa', password: 'aaa'},
-    {name: 'cc', mail: 'aaa', password: 'aaa'},
-    {name: 'dd', mail: 'aaa', password: 'aaa'}
-    ])
+    {name: 'Matsumoto', mail: 'matsumoto@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Oikawa', mail: 'oikawa@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Terada', mail: 'terada@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Shiomi', mail: 'shiomi@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Shishikura', mail: 'shishikura@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Joraku', mail: 'joraku@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Nagai', mail: 'nagai@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Fujikura', mail: 'fujikura@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Kanbara', mail: 'kanbara@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Ito', mail: 'ito@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Sato', mail: 'sato@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Iwai', mail: 'iwai@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Kase', mail: 'kase@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Sc', mail: 'sc@sansan.com', password: 'aaa', permission: '0'},
+    {name: 'Tanaka', mail: 'tanaka@sansan.com', password: 'aaa', permission: '0'}
+])

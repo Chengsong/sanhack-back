@@ -13,14 +13,10 @@ get '/' do
     
 end
 
-get '/login' do
-    return 'hello'
-end
-
-get '/feels' do
+get '/feels' do #all feels for today of all user
   content_type :json
-  @feels = User.joins(:feels).where('feels.date=?', Date.today)
-  @feels.to_json(include: :feels)
+  @feels = User.includes(:feels).where(feels: {date: Date.today})
+  @feels.to_json(methods: :feels)
 end
 
 get '/mypage/:user_id' do
@@ -35,6 +31,12 @@ get '/questions' do
   @questions.to_json
 end
 
+get '/allUsers' do #for debug
+  content_type :json
+  @users = User.all
+  @users.to_json
+end
+
 post '/feel' do
   calc = (params[:select1] + params[:select2] + params[:select3] + params[:select4] + params[:select5]) / 5
   Feel.create({
@@ -43,4 +45,18 @@ post '/feel' do
       calc_value: calc,
       my_value: params[:my_value]
   })
+end
+
+post '/signup' do
+  User.create(
+     mail:params[:mail], password:params[:password],
+     password_confirmation:params[:password_confirmation]
+  )
+end
+
+post '/signin' do 
+ user = User.find_by(mail: params[:mail])
+ if user && user.authenticate(params[:password])
+    session[:user] = user.id 
+ end 
 end
