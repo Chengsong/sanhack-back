@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160917041544) do
+ActiveRecord::Schema.define(version: 20160917061342) do
 
   create_table "feels", force: :cascade do |t|
     t.integer "user_id"
@@ -20,10 +20,12 @@ ActiveRecord::Schema.define(version: 20160917041544) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.text    "content"
-    t.integer "avg"
-    t.integer "min_value"
-    t.integer "max_value"
+    t.text   "content"
+    t.string "select1"
+    t.string "select2"
+    t.string "select3"
+    t.string "select4"
+    t.string "select5"
   end
 
   create_table "users", force: :cascade do |t|
