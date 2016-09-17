@@ -19,8 +19,10 @@ get '/feels' do
     
 end
 
-get '/mypage' do
-    
+get '/mypage/:user_id' do
+  content_type :json
+  @feels = Feel.where(user_id: params[:user_id]).all
+  @feels.to_json
 end
 
 get '/questions' do
