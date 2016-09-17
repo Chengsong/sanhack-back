@@ -36,5 +36,11 @@ get '/questions' do
 end
 
 post '/feel' do
-   
+  calc = (params[:select1] + params[:select2] + params[:select3] + params[:select4] + params[:select5]) / 5
+  Feel.create({
+      date: params[:date],
+      user_id: params[:user_id],
+      calc_value: calc,
+      my_value: params[:my_value]
+  })
 end
