@@ -9,11 +9,21 @@ require 'json'
 require "open-uri"
 require "net/http"
 
+require 'sinatra/cross_origin'
+
+configure do
+  enable :cross_origin
+end
+enable :cross_origin
+
 get '/' do
     
 end
 
 get '/feels' do #all feels for today of all user
+  cross_origin
+  response['Access-Control-Allow-Origin'] = '*'
+  response['Access-Control-Allow-Headers'] = 'Access-Control-Request-Headers'
   content_type :json
   @feels = User.includes(:feels).where(feels: {date: Date.today})
   @feels.to_json(methods: :feels)
