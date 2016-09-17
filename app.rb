@@ -6,6 +6,8 @@ require 'sinatra/activerecord'
 require './models'
 
 require 'json'
+require "open-uri"
+require "net/http"
 
 get '/' do
     
@@ -16,7 +18,9 @@ get '/login' do
 end
 
 get '/feels' do
-    
+  content_type :json
+  @feels = User.joins(:feels).where('feels.date=?', Date.today)
+  @feels.to_json(include: :feels)
 end
 
 get '/mypage/:user_id' do
@@ -29,4 +33,8 @@ get '/questions' do
   content_type :json
   @questions = Question.all
   @questions.to_json
+end
+
+post '/feel' do
+   
 end
