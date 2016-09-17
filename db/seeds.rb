@@ -15,11 +15,36 @@ end
 
 if Feel.count == 0
   Feel.create([
-    {user_id: '1', date: "2016-09-17", calc_value: '1', my_value: '3'},
-    {user_id: '2', date: "2016-09-17", calc_value: '2', my_value: '3'},
+    {user_id: '1', date: "2016-09-17", calc_value: '1', my_value: '5'},
+    {user_id: '2', date: "2016-09-17", calc_value: '2', my_value: '4'},
     {user_id: '3', date: "2016-09-17", calc_value: '3', my_value: '3'},
-    {user_id: '1', date: "2016-09-17", calc_value: '1', my_value: '3'},
-    {user_id: '1', date: "2016-09-16", calc_value: '1', my_value: '3'}
+    {user_id: '4', date: "2016-09-17", calc_value: '4', my_value: '3'},
+    {user_id: '5', date: "2016-09-17", calc_value: '5', my_value: '2'},
+    {user_id: '6', date: "2016-09-17", calc_value: '1', my_value: '5'},
+    {user_id: '7', date: "2016-09-17", calc_value: '2', my_value: '1'},
+    {user_id: '8', date: "2016-09-17", calc_value: '3', my_value: '3'},
+    {user_id: '9', date: "2016-09-17", calc_value: '4', my_value: '1'},
+    {user_id: '10', date: "2016-09-17", calc_value: '5', my_value: '2'},
+    {user_id: '11', date: "2016-09-17", calc_value: '1', my_value: '3'},
+    {user_id: '12', date: "2016-09-17", calc_value: '2', my_value: '2'},
+    {user_id: '13', date: "2016-09-17", calc_value: '3', my_value: '4'},
+    {user_id: '14', date: "2016-09-17", calc_value: '4', my_value: '3'},
+    {user_id: '15', date: "2016-09-17", calc_value: '5', my_value: '4'},
+    {user_id: '1', date: "2016-09-16", calc_value: '4', my_value: '5'},
+    {user_id: '2', date: "2016-09-16", calc_value: '3', my_value: '4'},
+    {user_id: '3', date: "2016-09-16", calc_value: '3', my_value: '3'},
+    {user_id: '4', date: "2016-09-16", calc_value: '3', my_value: '3'},
+    {user_id: '5', date: "2016-09-16", calc_value: '1', my_value: '2'},
+    {user_id: '6', date: "2016-09-16", calc_value: '3', my_value: '5'},
+    {user_id: '7', date: "2016-09-16", calc_value: '3', my_value: '1'},
+    {user_id: '8', date: "2016-09-16", calc_value: '1', my_value: '3'},
+    {user_id: '9', date: "2016-09-16", calc_value: '2', my_value: '1'},
+    {user_id: '10', date: "2016-09-16", calc_value: '3', my_value: '2'},
+    {user_id: '11', date: "2016-09-16", calc_value: '3', my_value: '3'},
+    {user_id: '12', date: "2016-09-16", calc_value: '4', my_value: '1'},
+    {user_id: '13', date: "2016-09-16", calc_value: '2', my_value: '5'},
+    {user_id: '14', date: "2016-09-16", calc_value: '2', my_value: '4'},
+    {user_id: '15', date: "2016-09-16", calc_value: '1', my_value: '2'}
   ])
 end
 
