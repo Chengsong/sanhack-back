@@ -7,10 +7,11 @@ end
 
 class User < ActiveRecord::Base
   has_secure_password
+  has_many :Feel
 end
 
 class Feel < ActiveRecord::Base
-    
+  belongs_to :User
 end
 
 class Question < ActiveRecord::Base

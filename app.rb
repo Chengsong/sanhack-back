@@ -26,7 +26,7 @@ get '/mypage/:user_id' do
 end
 
 get '/questions' do
-  @questions = Question.all
   content_type :json
+  @questions = Question.all
   @questions.to_json
 end
