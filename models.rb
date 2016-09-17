@@ -6,7 +6,7 @@ if development?
 end
 
 class User < ActiveRecord::Base
-    
+  has_secure_password
 end
 
 class Feel < ActiveRecord::Base
